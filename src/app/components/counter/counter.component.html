@@ -1,0 +1,15 @@
+<h2>Hola Counter</h2>
+<h3>Counter: {{ counter }}</h3>
+<button class="btn btn-primary me-2" (click)="addToCounter()">
+  Add to counter
+</button>
+<button class="btn btn-danger" (click)="subtractToCounter()">
+  Subtract to counter
+</button>
+<br />
+<input type="number" [(ngModel)]="value" class="m-5" />
+<br />
+<button class="btn btn-success me-2" (click)="toCounter(value)">
+  Add value to counter
+</button>
+<button class="btn btn-warning" (click)="reset()">Reset Counter</button>

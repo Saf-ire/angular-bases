@@ -1,0 +1,29 @@
+<h3>Listado de Héroes</h3>
+
+@if(deletedHero){
+<h3>
+  Último héroe borrado:
+  <small class="text-danger">{{ deletedHero.hero_name }}</small>
+</h3>
+}
+
+<ul class="mt-2 list-group">
+  @for(hero of heroes; track hero.hero_name){
+
+  <li class="list-group-item">{{ hero.hero_name }}</li>
+  }@empty {
+  <strong>Todos los héroes fueron eliminados 😢</strong>
+  <img
+    src="https://a-static.besthdwallpaper.com/shanks-crying-wallpaper-1440x900-69134_4.jpg"
+    alt="Young Shanks Cries"
+    width="800px"
+  />
+  }
+</ul>
+
+@if(heroes.length !== 0){
+
+<button class="btn btn-danger mt-2" (click)="removeLastHero()">
+  Borrar último héroe
+</button>
+}

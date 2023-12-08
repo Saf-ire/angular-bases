@@ -1,0 +1,27 @@
+<h1>{{ hero_name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>
+    <strong>{{ real_name }}</strong>
+  </dd>
+
+  <td>Edad:</td>
+  <dd>
+    <strong>{{ age }}</strong>
+  </dd>
+
+  <td>Método:</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>
+    <strong>{{ real_name | uppercase }}</strong>
+  </dd>
+</dl>
+@if(hero_name !== 'Spider-man') {
+<button class="btn btn-primary" (click)="changeName()">Cambiar Nombre</button>
+} @if(age === 45){
+<button class="btn btn-primary mx-2" (click)="changeAge()">Cambiar Edad</button>
+}
+<button class="btn btn-primary" (click)="reset()">Reset</button>
