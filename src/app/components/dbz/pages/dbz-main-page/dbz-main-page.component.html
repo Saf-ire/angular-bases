@@ -1,0 +1,24 @@
+<h1>DBZ Personajes</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <h4>Listado</h4>
+    <dbz-list
+      [characters]="characters"
+      (characterId)="onDeleteCharacter($event)"
+    ></dbz-list>
+    @if(characters.length !== 0){
+    <button (click)="onDeleteLastCharacter()" class="btn btn-danger mt-2">
+      Borrar Personaje
+    </button>
+    }
+  </div>
+  <div class="col">
+    <h4>Agregar Personaje</h4>
+
+    <dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-character>
+  </div>
+</div>

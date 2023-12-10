@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+
 import { CounterComponent } from './components/counter/counter.component';
 import { HeroComponent } from './components/heroes/hero/hero.component';
 import { ListComponent } from './components/heroes/list/list.component';
+import { DbzMainPageComponent } from './components/dbz/pages/dbz-main-page/dbz-main-page.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { ListComponent } from './components/heroes/list/list.component';
     CounterComponent,
     HeroComponent,
     ListComponent,
+    DbzMainPageComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
